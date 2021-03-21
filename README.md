@@ -9,7 +9,6 @@ package main
 
 import (
 	"log"
-	"os"
 
 	udmx "github.com/noddy76/udmx-go"
 )
@@ -17,16 +16,14 @@ import (
 func main() {
 	dmx, err := udmx.NewUdmx()
 	if err != nil {
-		log.Panicf("Error opening DMX : %v")
-		os.Exit(1)
+		log.Panicf("Error opening DMX : %v", err)
 	}
 
 	dmx.SetChannelRange(0, []byte{255, 255, 0, 0})
 
 	err = dmx.Close()
 	if err != nil {
-		log.Panicf("Error closing DMX : %v")
-		os.Exit(1)
+		log.Panicf("Error closing DMX : %v", err)
 	}
 }
 ```
