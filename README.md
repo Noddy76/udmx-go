@@ -1,4 +1,4 @@
-# udmc-go
+# udmx-go
 
 A simple client library for the [uDMX](https://www.anyma.ch/research/udmx/) USB to DMX interface. Based on the C uDMX code on [GitHub](https://github.com/mirdej/udmx).
 
